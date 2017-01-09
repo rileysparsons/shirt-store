@@ -44,7 +44,7 @@ gem 'spree_gateway', '~> 3.2.0.beta'
 gem 'rack-timeout'
 
 # For image storage on S3
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
 
 
 group :development, :test do
