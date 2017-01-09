@@ -25,7 +25,8 @@ if Rails.env.production?
 	  s3_credentials: {
 	    access_key_id:     "AKIAIZXGXZAVGJ3FMAQQ", #ENV['AWS_ACCESS_KEY_ID'],
 	    secret_access_key: "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",#ENV['AWS_SECRET_ACCESS_KEY'],
-	    bucket:            "shirt-website"#ENV['S3_BUCKET_NAME']
+	    bucket:            "shirt-website",#ENV['S3_BUCKET_NAME']
+	    s3_region:         "us-west-1"
 	  },
 
 	  storage:        :s3,
