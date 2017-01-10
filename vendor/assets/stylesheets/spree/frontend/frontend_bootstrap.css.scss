@@ -1,0 +1,150 @@
+//Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
+
+$brand-primary: #B30738;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// -- Spree Custom Header and Footer ---------------------
+#spree-header {
+  background-color: $brand-primary;
+  margin-bottom: $line-height-computed;
+
+  #header {
+    background: rgba($gray-darker, 0.4);
+    padding: $line-height-computed 0;
+  }
+
+  #logo {
+    margin: auto;
+
+    a {
+		color: #FFF;
+		margin: auto;
+		font-weight: 700;
+		font-size: .8em;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		border: 2px solid #FFF;
+		padding: 1rem;
+		text-decoration: none;
+		color: #FFF;
+		float: left;
+		white-space: nowrap;
+    }
+  }
+
+  .nav a {
+    color: white;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+      background-color: transparent;
+    }
+  }
+
+  .navbar {
+    border: 0;
+    margin-bottom: 0;
+  }
+}
+
+#content {
+	span.info {
+		display: block;
+		// margin-top: 30px;
+		// margin-bottom: 30px;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 2px;
+	}
+	.panel-default {
+		border-color: #000;
+	}
+	.panel {
+		border-radius: 0px;
+		border-width: 2px
+	}
+	.panel-footer {
+		background-color: #FFF;
+		border-top-color: #000;
+	}
+}
+
+
+#spree-footer {
+  background: $gray-dark;
+  padding-top: $padding-base-horizontal;
+  margin-top: $line-height-computed;
+  color: white;
+}
+
+// -- Spree Layout Custom Rules -------------------------
+
+.alert-notice { @extend .alert-success; }
+.alert-error, .alert-registration_error { @extend .alert-danger; }
+.alert-alert { @extend .alert-info; }
+
+.product-body {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  img {
+  	max-height: 250px;
+  	max-width: 100%;
+  }
+}
+
+#main-image {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.progress-steps {
+  margin-top: $line-height-computed;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+// Center cart line items
+table {
+  &.table > tbody > tr {
+    &.line-item td, &.stock-item td {
+      vertical-align: middle;
+    }
+  }
+
+  &#line-items {
+    > tbody, > tfoot {
+      > tr > td {
+        vertical-align: middle;
+
+        &.order-qty {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Footer links
+#footer-left a {
+  color: lighten($brand-primary, 20);
+
+  &:hover {
+    color: lighten($brand-primary, 10);
+  }
+}
+
+// Updated credit-card image
+#credit-card-image {
+  margin-top: -10px;
+}
+
+.existing-credit-card-list td {
+  padding: 5px;
+}
